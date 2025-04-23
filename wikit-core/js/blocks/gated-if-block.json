@@ -1,0 +1,27 @@
+{
+	"apiVersion": 3,
+	"name": "wdg/gated-if",
+	"title": "If",
+	"parent": [
+		"wdg/gated"
+	],
+	"icon": "unlock",
+	"attributes": {},
+	"supports": {
+		"align": false,
+		"className": false,
+		"customClassName": false,
+		"color": {
+			"gradients": false,
+			"heading": false,
+			"button": false,
+			"link": false
+		},
+		"authentication": false,
+		"lock": false
+	},
+	"usesContext": [
+		"wdg/gated/status",
+		"wdg/gated/restrictions"
+	]
+}

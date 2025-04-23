@@ -1,0 +1,49 @@
+{
+	"name": "wdgdc/wikit-facets",
+	"description": "Wikit Facets",
+	"type": "library",
+	"version": "0.0.13",
+	"authors": [
+		{
+			"name": "Web Development Group",
+			"homepage": "https://wdg.co"
+		}
+	],
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"autoload": {
+		"psr-4": {
+			"WDG\\Facets\\": "src/"
+		}
+	},
+	"require": {
+		"php": ">=8.1.0"
+	},
+	"require-dev": {
+		"dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+		"wp-coding-standards/wpcs": "^3.0",
+		"phpunit/phpunit": "^10.4"
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	},
+	"scripts": {
+		"phpcs": "phpcs -s --extensions=php --ignore=vendor",
+		"phpcbf": "phpcbf -s --extensions=php --ignore=vendor",
+		"install-tests": "./bin/install-tests.sh",
+		"phpunit": "phpunit",
+		"release": "composer install --no-dev && composer archive --format=zip"
+	},
+	"archive": {
+		"exclude": [
+			".*",
+			"*.zip",
+			"phpcs.xml",
+			"phpunit.xml",
+			"tests",
+			"bin"
+		]
+	}
+}

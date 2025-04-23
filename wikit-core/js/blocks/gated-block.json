@@ -1,0 +1,39 @@
+{
+	"apiVersion": 3,
+	"name": "wdg/gated",
+	"title": "Gated",
+	"icon": "privacy",
+	"attributes": {
+		"context": {
+			"type": "boolean",
+			"default": true
+		},
+		"status": {
+			"type": "string",
+			"default": "authenticated"
+		},
+		"restrictions": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		}
+	},
+	"supports": {
+		"align": false,
+		"className": false,
+		"customClassName": false,
+		"color": {
+			"gradients": false,
+			"heading": false,
+			"button": false,
+			"link": false
+		},
+		"authentication": false
+	},
+	"providesContext": {
+		"wdg/gated/context": "context",
+		"wdg/gated/status": "status",
+		"wdg/gated/restrictions": "restrictions"
+	}
+}

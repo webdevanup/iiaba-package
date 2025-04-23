@@ -1,0 +1,49 @@
+{
+	"name": "wdgdc/wikit-core",
+	"description": "WIKIT - WDG Internal Framework",
+	"type": "library",
+	"readme": "README.md",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Web Development Group",
+			"homepage": "https://wdg.co"
+		}
+	],
+	"require": {
+		"doctrine/inflector": "^2.0",
+		"php": ">=8.1"
+	},
+	"require-dev": {
+		"wp-coding-standards/wpcs": "^3.0",
+		"dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+		"symfony/var-dumper": "^6.4",
+		"phpcompatibility/php-compatibility": "^9.3"
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"autoload": {
+		"psr-4": {
+			"WDG\\Core\\": "src/"
+		},
+		"files": [
+			"index.php",
+			"src/functions/assets.php",
+			"src/functions/html.php",
+			"src/functions/post.php",
+			"src/functions/string.php"
+		]
+	},
+	"scripts": {
+		"npm-build": [ "npm install; npm run build" ],
+		"post-install-cmd": [ "composer run-script npm-build" ],
+		"post-update-cmd": [ "composer run-script npm-build" ],
+		"phpcs": "phpcs",
+		"phpcbf": "phpcbf"
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	}
+}

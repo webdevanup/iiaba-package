@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<ruleset name="WDG-Wikit">
+	<description>WDG WordPress Coding Standards</description>
+
+	<arg name="extensions" value="php" />
+	<arg name="colors" />
+	<arg value="s" />
+
+	<exclude-pattern>./node_modules/*</exclude-pattern>
+	<exclude-pattern>./vendor/*</exclude-pattern>
+	<exclude-pattern>./dist/*</exclude-pattern>
+	<exclude-pattern>./dist-tmp/*</exclude-pattern>
+
+	<rule ref="WordPress-Extra">
+		<exclude name="Generic.PHP.DisallowShortOpenTag.EchoFound" />
+		<exclude name="PSR12.Functions.ReturnTypeDeclaration.SpaceBeforeColon" />
+		<exclude name="Universal.Arrays.DisallowShortArraySyntax" />
+		<exclude name="Universal.Operators.DisallowShortTernary" />
+		<exclude name="Universal.Operators.DisallowStandalonePostIncrementDecrement.PostIncrementFound" />
+		<exclude name="Universal.ControlStructures.DisallowLonelyIf.Found" />
+		<exclude name="WordPress.Files.FileName" />
+		<exclude name="WordPress.NamingConventions.ValidHookName" />
+		<exclude name="WordPress.NamingConventions.ValidVariableName" />
+		<exclude name="WordPress.WP.EnqueuedResourceParameters.MissingVersion" />
+		<exclude name="WordPress.WP.CapitalPDangit.MisspelledInComment" />
+		<exclude name="WordPress.WP.EnqueuedResourceParameters.NoExplicitVersion" />
+		<exclude name="WordPress.WP.I18n.MissingTranslatorsComment" />
+	</rule>
+	<rule ref="WordPress.Security.EscapeOutput">
+		<properties>
+			<property name="customAutoEscapedFunctions" type="array">
+				<element value="svg"/>
+				<element value="html_attributes"/>
+				<element value="wp_strip_all_tags"/>
+			</property>
+		</properties>
+	</rule>
+	<rule ref="WordPress.WP.AlternativeFunctions">
+		<properties>
+			<property name="exclude" type="array">
+				<element value="file_get_contents"/>
+				<element value="json_encode"/>
+				<element value="parse_url"/>
+			</property>
+		</properties>
+	</rule>
+</ruleset>

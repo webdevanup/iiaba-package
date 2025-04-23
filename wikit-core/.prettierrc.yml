@@ -1,0 +1,23 @@
+tabWidth: 4
+useTabs: true
+printWidth: 160
+singleQuote: true
+trailingComma: "es5"
+bracketSameLine: false
+parenSpacing: true
+experimentalTernaries: false
+overrides:
+  - files: "*.{js,es,jsx}"
+    options:
+      singleAttributePerLine: true
+  - files: "*.{css,sass,scss}"
+    options:
+      singleQuote: false
+      trailingComma: none
+  - files: "*.{yml,yaml}"
+    options:
+      useTabs: false
+      tabWidth: 2
+plugins:
+  - prettier-plugin-css-order
+cssDeclarationSorterOrder: alphabetical

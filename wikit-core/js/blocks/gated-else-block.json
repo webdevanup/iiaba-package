@@ -1,0 +1,27 @@
+{
+	"apiVersion": 3,
+	"name": "wdg/gated-else",
+	"title": "Else",
+	"parent": [
+		"wdg/gated"
+	],
+	"icon": "lock",
+	"attributes": {},
+	"supports": {
+		"align": false,
+		"className": false,
+		"customClassName": false,
+		"color": {
+			"gradients": false,
+			"heading": false,
+			"button": false,
+			"link": false
+		},
+		"authentication": false,
+		"lock": false
+	},
+	"usesContext": [
+		"wdg/gated/status",
+		"wdg/gated/restrictions"
+	]
+}

@@ -1,0 +1,17 @@
+{
+	"name": "wdgdc/wp-migrate",
+	"description": "WordPress Migration",
+	"type": "library",
+	"license": "MIT",
+	"authors": [{
+		"name": "The Web Development Group",
+		"email": "info@webdevelopmentgroup.com"
+	}],
+	"minimum-stability": "dev",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"WDG\\Migrate\\": "src/"
+		}
+	}
+}
